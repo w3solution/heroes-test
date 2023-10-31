@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "996bf839-ae28-42a2-8c6b-0e5696e34d33",
+		"name": "Heroes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1147027"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/heroes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Superman\",\r\n  \"nickname\": \"Man of Steel\",\r\n  \"birthday\": \"1938-04-18\",\r\n  \"weapons\": [\r\n    {\r\n      \"name\": \"sword\",\r\n      \"mod\": 3,\r\n      \"attr\": \"strength\",\r\n      \"equipped\": true\r\n    }\r\n  ],\r\n  \"attributes\": {\r\n    \"strength\": 100,\r\n    \"dexterity\": 80,\r\n    \"constitution\": 90,\r\n    \"intelligence\": 75,\r\n    \"wisdom\": 70,\r\n    \"charisma\": 90\r\n  },\r\n  \"keyAttribute\": \"strength\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"654128c8e62aed4ebfaf11f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/heroes?filter=heroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes?filter=heroes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "heroes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"654128c8e62aed4ebfaf11f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nickname\": \"Novo Apelido\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/heroes/654128c8e62aed4ebfaf11f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"heroes",
+						"654128c8e62aed4ebfaf11f1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
